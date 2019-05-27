@@ -16,22 +16,43 @@ export const MapBox = () => {
         zoom: 14
       }}
     >
-      {({ viewport, changeViewPort }) => {
-        const { latitude, longitude } = viewport;
+      {({
+        viewport,
+        changeViewPort,
+        markerCords,
+        isRenderMarker,
+        changeIsRenderMarker
+      }) => {
+        const { lat, long } = markerCords;
         return (
-          <ReactMapGL
-            {...viewport}
-            mapboxApiAccessToken={accessToken}
-            onViewportChange={view => changeViewPort(view)}
-            mapStyle="mapbox://styles/mapbox/light-v9"
-          >
-            <Marker latitude={latitude} longitude={longitude}>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
-                alt=""
-              />
-            </Marker>
-          </ReactMapGL>
+          <div className="ts__mapbox">
+            <ReactMapGL
+              {...viewport}
+              mapboxApiAccessToken={accessToken}
+              onViewportChange={view => changeViewPort(view)}
+              mapStyle="mapbox://styles/mapbox/light-v9"
+              onClick={() => changeIsRenderMarker(!isRenderMarker)}
+            >
+              {isRenderMarker && (
+                <Marker latitude={lat} longitude={long}>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
+                    alt=""
+                  />
+                </Marker>
+              )}
+            </ReactMapGL>
+
+            <div className="ts__result">
+              <h3>Marker position</h3>
+              <p>
+                latitude: <span>{lat}</span>
+              </p>
+              <p>
+                longitude: <span>{lat}</span>
+              </p>
+            </div>
+          </div>
         );
       }}
     </MapWrapper>
