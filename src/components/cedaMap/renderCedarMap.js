@@ -26,7 +26,7 @@ export const RenderCedarMap = ({
   };
 
   return (
-    <div>
+    <div className="ts__mapbox">
       <CedarMaps
         containerStyle={{
           height: viewport.height,

@@ -1,12 +1,16 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AppLayoutRoute } from './components/appLayoutRoute/index';
 import { MapBox } from './components/mapBox';
+import { CedarMap } from './components/cedaMap';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <MapBox />
-    </div>
+    <Router>
+      <AppLayoutRoute exact path="/" component={MapBox} />
+      <AppLayoutRoute exact path="/cedar" component={CedarMap} />
+    </Router>
   );
 }
 

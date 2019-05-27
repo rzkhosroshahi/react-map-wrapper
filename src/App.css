@@ -8,3 +8,60 @@ body {
     width: 3rem;
     height: 3rem;
 }
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+nav,
+ul,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03a9f4;
+    height: 2rem;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #3f51b5;
+}
+
+
+.ts__mapbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.ts__result {
+    margin-left: 1rem;
+}
+
+.ts__result span {
+    position: absolute;
+}
