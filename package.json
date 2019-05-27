@@ -7,12 +7,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-testing-library": "^7.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,6 +40,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
@@ -46,8 +51,10 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.3.0",
+    "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
-    "pretty-quick": "^1.11.0"
+    "pretty-quick": "^1.11.0",
+    "react-test-renderer": "^16.8.6"
   }
 }
