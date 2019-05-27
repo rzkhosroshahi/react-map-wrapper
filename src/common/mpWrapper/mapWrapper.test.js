@@ -60,4 +60,29 @@ describe('MapWrapper component', () => {
     fireEvent.click(changeBtn);
     expect(latitudeNode.textContent).toBe(newViewPort.latitude.toString());
   });
+
+  test('change viewPort state by field', () => {
+    const { getByTestId } = render(
+      <MapWrapper>
+        {({ viewport, changeViewPortFiled }) => (
+          <div>
+            <button
+              data-testid="change-btn"
+              type="button"
+              onClick={() => changeViewPortFiled('latitude', 12345)}
+            >
+              click to change view port state
+            </button>
+            <p data-testid="latitude">{viewport.latitude}</p>
+          </div>
+        )}
+      </MapWrapper>
+    );
+
+    const changeBtn = getByTestId('change-btn');
+    const latitudeNode = getByTestId('latitude');
+
+    fireEvent.click(changeBtn);
+    expect(latitudeNode.textContent).toBe('12345');
+  });
 });
