@@ -52,7 +52,7 @@ export const MapBox = () => {
                 longitude: <span>{lat}</span>
               </p>
               <br/>
-              <h4>Guid</h4>
+              <h4>Guide</h4>
               <p>after click on map marker show up</p>
               <p>for updating lat,lng you just dragging on the map</p>
               <p>for remove marker you can click on the map again</p>
