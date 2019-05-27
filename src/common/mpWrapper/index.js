@@ -8,12 +8,24 @@ export class MapWrapper extends PureComponent {
     this.state = {
       viewport: props.viewport
     };
+
+    this.setViewPortState = this.setViewPortState.bind(this);
   }
+
+  setViewPortState(view) {
+    this.setState({
+      viewport: view
+    });
+  };
 
   render() {
     const { viewport } = this.state;
     const { children } = this.props;
-    return <section className="map_wrapper">{children({ viewport })}</section>;
+    return (
+      <section className="map_wrapper">
+        {children({ viewport, changeViewPort: this.setViewPortState })}
+      </section>
+    );
   }
 }
 
