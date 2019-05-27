@@ -5,3 +5,12 @@ export const defaultViewPort = {
   longitude: 51.38949088069012,
   zoom: 12
 };
+
+export const updateObject = (target, field, value) => {
+  if (target.hasOwnProperty(field)) {
+    return Object.assign({}, target, {
+      [field]: value
+    });
+  }
+  return target;
+};
