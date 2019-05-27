@@ -59,6 +59,11 @@ export const RenderCedarMap = ({
         <p>
           longitude: <span>{lat}</span>
         </p>
+        <br/>
+        <h4>Guide</h4>
+        <p>after click on map marker show up</p>
+        <p>for updating lat,lng you should click on the map</p>
+        <p>for remove marker you can click on the marker</p>
       </div>
     </div>
   );
