@@ -60,5 +60,6 @@
     "prettier": "^1.17.1",
     "pretty-quick": "^1.11.0",
     "react-test-renderer": "^16.8.6"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
