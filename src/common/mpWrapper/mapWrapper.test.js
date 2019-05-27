@@ -86,3 +86,48 @@ describe('MapWrapper component', () => {
     expect(latitudeNode.textContent).toBe('12345');
   });
 });
+
+describe('MapWrapper component Marker state', () => {
+  afterEach(cleanup);
+  test('should not to rendering marker when isRenderMarker is false ', () => {
+    const { getByTestId } = render(
+      <MapWrapper>
+        {({ isRenderMarker }) => (
+          <div>
+            {isRenderMarker && <p data-testid="render_markers">render maker</p>}
+          </div>
+        )}
+      </MapWrapper>
+    );
+    function isRendering() {
+      getByTestId('render_markers');
+    }
+    expect(isRendering).toThrowError();
+  });
+
+  test('changeIsRenderMarker ', () => {
+    const { getByTestId } = render(
+      <MapWrapper>
+        {({ isRenderMarker, changeIsRenderMarker }) => (
+          <div>
+            <button
+              data-testid="change-btn"
+              type="button"
+              onClick={() => changeIsRenderMarker(true)}
+            >
+              click to change isRendering
+            </button>
+            {isRenderMarker && <p data-testid="render_markers">render maker</p>}
+          </div>
+        )}
+      </MapWrapper>
+    );
+    const changeBtn = getByTestId('change-btn');
+    fireEvent.click(changeBtn);
+
+    function isRendering() {
+      getByTestId('render_markers');
+    }
+    expect(isRendering).not.toThrowError();
+  });
+});
