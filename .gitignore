@@ -1,0 +1,38 @@
+  GNU nano 2.0.6                   File: .gitignore                                              
+
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+packages
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.vscode
+yarn-error.log
+
+.env
+
+# Created by https://www.gitignore.io/api/webstorm
+
+### WebStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio a$
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+                                       [ Read 103 lines ]
+^G Get Help     ^O WriteOut     ^R Read File    ^Y Prev Page    ^K Cut Text     ^C Cur Pos
+^X Exit         ^J Justify      ^W Where Is     ^V Next Page    ^U UnCut Text   ^T To Spellx
