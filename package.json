@@ -4,6 +4,7 @@
   "private": true,
   "author": "reza khosroshahi",
   "dependencies": {
+    "@cedarstudios/react-cedarmaps": "^1.0.3",
     "mapbox-gl": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
