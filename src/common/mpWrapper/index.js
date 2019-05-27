@@ -24,7 +24,8 @@ MapWrapper.propTypes = {
     latitude: PropTypes.number,
     longitude: PropTypes.number,
     zoom: PropTypes.number
-  })
+  }),
+  children: PropTypes.func.isRequired
 };
 
 MapWrapper.defaultProps = {
