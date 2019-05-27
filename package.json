@@ -4,9 +4,11 @@
   "private": true,
   "author": "reza khosroshahi",
   "dependencies": {
+    "mapbox-gl": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-map-gl": "^4.1.2",
     "react-scripts": "3.0.1",
     "react-testing-library": "^7.0.1"
   },
