@@ -1,7 +1,8 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb", "prettier", "prettier/react", "plugin:cypress/recommended"],
+  "plugins": ["prettier", "cypress"],
   "env": {
+    "cypress/globals": true,
     "jest": true
   },
   "rules": {
