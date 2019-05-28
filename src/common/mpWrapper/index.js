@@ -56,6 +56,7 @@ export class MapWrapper extends PureComponent {
   }
 
   setIsRenderMarker(bool) {
+    console.log('setIsRenderMarker');
     this.setState({
       isRenderMarker: bool
     });
