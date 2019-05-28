@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { AppLayoutRoute } from './components/appLayoutRoute/index';
 import { MapBox } from './components/mapBox';
-import { CedarMap } from './components/cedaMap';
+import { CedarMap } from './components/cedarMap';
 import './App.css';
 
 function App() {

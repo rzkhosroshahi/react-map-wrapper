@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapWrapper } from '../../common/mpWrapper';
+import { MapWrapper } from '../../common/mapWrapper';
 import { RenderCedarMap } from './renderCedarMap';
 
 const accessToken = process.env.REACT_APP_CEDAR_TOKEN;
