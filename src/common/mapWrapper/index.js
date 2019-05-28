@@ -21,7 +21,7 @@ export class MapWrapper extends PureComponent {
     const { viewport, isRenderMarker } = this.state;
 
     // update marker cords when viewport cords is change
-    if (prevState.viewport.latitude !== viewport.latitude && isRenderMarker) {
+    if (isRenderMarker && (prevState.viewport.latitude !== viewport.latitude)) {
       const {
         viewport: { latitude, longitude }
       } = this.state;
@@ -29,7 +29,7 @@ export class MapWrapper extends PureComponent {
     }
 
     // update marker cords when isRenderMarker state is change
-    if (prevState.isRenderMarker !== isRenderMarker && isRenderMarker) {
+    if (isRenderMarker && (prevState.isRenderMarker !== isRenderMarker)) {
       const {
         viewport: { latitude, longitude }
       } = this.state;
@@ -37,7 +37,7 @@ export class MapWrapper extends PureComponent {
     }
 
     // after renderMarker getting to be false restore marker cords state to default
-    if (prevState.isRenderMarker !== isRenderMarker && !isRenderMarker) {
+    if (!isRenderMarker && (prevState.isRenderMarker !== isRenderMarker)) {
       this.setMarkerCords(0, 0);
     }
   }
