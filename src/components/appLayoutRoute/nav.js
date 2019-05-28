@@ -10,6 +10,9 @@ export const Nav = () => (
       <li>
         <Link to="/cedar">cedar map</Link>
       </li>
+      <li>
+        <Link to="/cedar_default">cedar default cords</Link>
+      </li>
     </ul>
   </nav>
 );
