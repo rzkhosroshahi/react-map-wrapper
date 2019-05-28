@@ -54,10 +54,10 @@ export const RenderCedarMap = ({
       <div className="ts__result">
         <h3>Marker position</h3>
         <p>
-          latitude: <span>{lat}</span>
+          latitude: <span data-testid="lat">{lat}</span>
         </p>
         <p>
-          longitude: <span>{lat}</span>
+          longitude: <span data-testid="long">{long}</span>
         </p>
         <br/>
         <h4>Guide</h4>
