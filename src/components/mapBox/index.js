@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { MapWrapper } from '../../common/mpWrapper';
+import { MapWrapper } from '../../common/mapWrapper';
 
 const accessToken = process.env.REACT_APP_MAP_BOX_KEY;
 
