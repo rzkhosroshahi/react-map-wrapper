@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { defaultViewPort, updateObject } from '../../utils';
+import { defaultViewPort, updateObjectField } from '../../utils';
 
 export class MapWrapper extends PureComponent {
   constructor(props) {
@@ -51,7 +51,7 @@ export class MapWrapper extends PureComponent {
   setViewPortStateField(field, value) {
     const { viewport } = this.state;
     this.setState({
-      viewport: updateObject(viewport, field, value)
+      viewport: updateObjectField(viewport, field, value)
     });
   }
 
