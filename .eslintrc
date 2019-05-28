@@ -1,7 +1,8 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb", "prettier", "prettier/react", "plugin:cypress/recommended"],
+  "plugins": ["prettier", "cypress"],
   "env": {
+    "cypress/globals": true,
     "jest": true
   },
   "rules": {
@@ -15,7 +16,8 @@
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-prototype-builtins": "off"
   },
   "globals": {
     "window": true,

@@ -1,33 +1,67 @@
-.App {
-  text-align: center;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.mapboxgl-marker img {
+    width: 3rem;
+    height: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+body,
+nav,
+ul,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03a9f4;
+    height: 2rem;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #3f51b5;
+}
+
+
+.ts__mapbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.ts__result {
+    margin-left: 1rem;
+}
+
+.ts__result span {
+    position: absolute;
 }
