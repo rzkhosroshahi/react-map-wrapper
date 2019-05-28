@@ -6,21 +6,21 @@ The MapWrapper component provides some utilities to pass Geocoder API tools. As 
 
 ```jsx
 render() {
-	return (
-		<MapWrapper>
-			({ viewport, markerCords } => {
-				const { lat, long } = markerCords;
-				return (
-					<Geocoder
-						lat={viewport.latitude}
-						long={viewport.longitude}
-						onChangeGeocoder={view => changeViewPortFiled('latitude', view.lat)}
-					>
-						<MarkerGeocoder lat={lat} long={long} />
-					</Geocoder>
-				)}
-			)
-		</MapWrapper>
-	);
+  return (
+    <MapWrapper>
+      {({ viewport, markerCords }) => {
+        const { lat, long } = markerCords;
+        return (
+          <Geocoder
+            lat={viewport.latitude}
+            long={viewport.longitude}
+            onChangeGeocoder={view => changeViewPortFiled("latitude", view.lat)}
+          >
+            <MarkerGeocoder lat={lat} long={long} />
+          </Geocoder>
+        );
+      }}
+    </MapWrapper>
+  );
 }
 ```
