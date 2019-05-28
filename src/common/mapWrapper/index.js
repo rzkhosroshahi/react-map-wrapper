@@ -77,11 +77,11 @@ export class MapWrapper extends PureComponent {
       <section className="map_wrapper">
         {children({
           viewport,
-          changeViewPort: this.setViewPortState,
-          changeViewPortFiled: this.setViewPortStateField,
           markerCords,
           isRenderMarker,
-          changeIsRenderMarker: this.setIsRenderMarker
+          changeViewPort: this.setViewPortState,
+          changeViewPortFiled: this.setViewPortStateField,
+          changeIsRenderMarker: this.setIsRenderMarker,
         })}
       </section>
     );
