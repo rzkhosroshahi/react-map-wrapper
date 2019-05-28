@@ -13,7 +13,7 @@ export const RenderMapBox = ({
 }) => {
   const { lat, long } = markerCords;
   const handClick = () => {
-    changeIsRenderMarker(!isRenderMarker)
+    changeIsRenderMarker(!isRenderMarker);
   };
   return (
     <div className="ts__mapbox">
@@ -24,14 +24,12 @@ export const RenderMapBox = ({
         mapStyle="mapbox://styles/mapbox/light-v9"
         onClick={() => handClick()}
       >
-        {isRenderMarker && (
-          <Marker latitude={lat} longitude={long}>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
-              alt=""
-            />
-          </Marker>
-        )}
+        <Marker latitude={lat} longitude={long}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg"
+            alt=""
+          />
+        </Marker>
       </ReactMapGL>
 
       <div className="ts__result">
