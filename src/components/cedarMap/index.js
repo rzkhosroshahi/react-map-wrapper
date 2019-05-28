@@ -4,9 +4,9 @@ import { RenderCedarMap } from './renderCedarMap';
 
 const accessToken = process.env.REACT_APP_CEDAR_TOKEN;
 
-export const CedarMap = () => {
+export const CedarMap = (props) => {
   return (
-    <MapWrapper>
+    <MapWrapper {...props}>
       {wrapperProps => <RenderCedarMap token={accessToken} {...wrapperProps} />}
     </MapWrapper>
   );
