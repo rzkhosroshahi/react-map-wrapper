@@ -27,14 +27,14 @@ render() {
 
 ## Map Wrapper provided utilities
 
-| name                 | type                 | explain                                                                                                                                                    |
-| -------------------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| viewport             | object               | this contains: width, height, latitude, longitude, zoom. default viewport its [here](https://github.com/rzkhosroshahi/react-map-wrapper/#Default-viewport) |
-| markerCords          | object               | this contains marker coordinate lat, long. default for this is zero                                                                                                                                                       |
-| changeViewPort       | void                 | update viewport state with pass all viewport new state.                                                                                                                                                       |
-| changeViewPortFiled  | void                 | update just one field in viewport                                                                                                                                                      |
-| isRenderMarker       | boolean              | this represents that markers should be rendering or not. default is *false*                                                                                                                                                        |
-| changeIsRenderMarker | changeIsRenderMarker | update isRenderMarker state by pass boolean argument                                                                                                                                                     |
+| name                 | type                 | explain                                                                                                  |
+| -------------------- | :------------------- | :------------------------------------------------------------------------------------------------------- |
+| viewport             | object               | this contains: width, height, latitude, longitude, zoom. default viewport its [here](/#Default-viewport) |
+| markerCords          | object               | this contains marker coordinate lat, long. default for this is zero                                      |
+| changeViewPort       | void                 | update viewport state with pass all viewport new state                                                   |
+| changeViewPortFiled  | void                 | update just one field in viewport                                                                        |
+| isRenderMarker       | boolean              | this represents that markers should be rendering or not. default is _false_                              |
+| changeIsRenderMarker | changeIsRenderMarker | update isRenderMarker state by pass boolean argument                                                     |
 
 ## Default viewport
 
