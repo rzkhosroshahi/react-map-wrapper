@@ -21,3 +21,8 @@ export const updateObjectField = (target, field, value) => {
   }
   return target;
 };
+
+export const isRenderingDefault = markerCords => {
+  const { lat, long } = markerCords;
+  return !!(lat || long);
+};

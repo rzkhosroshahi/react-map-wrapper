@@ -1,6 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { defaultViewPort, updateObjectField } from '../../utils';
+import {
+  defaultViewPort,
+  isRenderingDefault,
+  updateObjectField
+} from '../../utils';
 
 export class MapWrapper extends PureComponent {
   constructor(props) {
@@ -8,7 +12,7 @@ export class MapWrapper extends PureComponent {
     this.state = {
       viewport: props.viewport,
       markerCords: props.markerCords,
-      isRenderMarker: false
+      isRenderMarker: isRenderingDefault(props.markerCords)
     };
 
     this.setViewPortState = this.setViewPortState.bind(this);
@@ -21,7 +25,7 @@ export class MapWrapper extends PureComponent {
     const { viewport, isRenderMarker } = this.state;
 
     // update marker cords when viewport cords is change
-    if (isRenderMarker && (prevState.viewport.latitude !== viewport.latitude)) {
+    if (isRenderMarker && prevState.viewport.latitude !== viewport.latitude) {
       const {
         viewport: { latitude, longitude }
       } = this.state;
@@ -29,7 +33,7 @@ export class MapWrapper extends PureComponent {
     }
 
     // update marker cords when isRenderMarker state is change
-    if (isRenderMarker && (prevState.isRenderMarker !== isRenderMarker)) {
+    if (isRenderMarker && prevState.isRenderMarker !== isRenderMarker) {
       const {
         viewport: { latitude, longitude }
       } = this.state;
@@ -37,7 +41,7 @@ export class MapWrapper extends PureComponent {
     }
 
     // after renderMarker getting to be false restore marker cords state to default
-    if (!isRenderMarker && (prevState.isRenderMarker !== isRenderMarker)) {
+    if (!isRenderMarker && prevState.isRenderMarker !== isRenderMarker) {
       this.setMarkerCords(0, 0);
     }
   }
@@ -81,7 +85,7 @@ export class MapWrapper extends PureComponent {
           isRenderMarker,
           changeViewPort: this.setViewPortState,
           changeViewPortFiled: this.setViewPortStateField,
-          changeIsRenderMarker: this.setIsRenderMarker,
+          changeIsRenderMarker: this.setIsRenderMarker
         })}
       </section>
     );
